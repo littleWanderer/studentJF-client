@@ -3,16 +3,17 @@
 $(document).ready(function(){
 
 
-	const URLlogin="http://127.0.0.1:8000/api/logout";
 
 	$("#logout").click(function(e){
 
 		e.preventDefault();
         e.stopPropagation();
 
+		const URLlogin="http://127.0.0.1:8000/api/logout";
+
 			  	
-		var token = sessionStorage.getItem('token');
-		console.log(token);
+        var token = sessionStorage.getItem('token');
+        console.log(token);
 
 		$.ajax({
 			  
@@ -23,15 +24,19 @@ $(document).ready(function(){
 			  },
 			  success: function(data){ 
 
-			  	sessionStorage.getItem('token');
-			  	//destroy the token
-			  	console.log(data.token);
+			  	sessionStorage.removeItem('token');
+			  	sessionStorage.removeItem('email');
+
 
 	  			window.location.href = "index.html";
 			  		
 			  },
-			  error: function(){
-			  	alert('Error while logging out!');
+			  error: function(XMLHttpRequest, textStatus, errorThrown){
+			  
+			  		var status=XMLHttpRequest.status;
+
+			  		alert("Greska!");
+	
 			  }
 
 
@@ -46,3 +51,7 @@ $(document).ready(function(){
 
 
 })
+
+
+
+

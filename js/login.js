@@ -20,6 +20,8 @@ $(document).ready(function(){
 		
 		console.log(jsonData);
 
+		
+
 		$.ajax({
 			  headers: { 
 		        'Accept': 'application/json',
@@ -30,22 +32,35 @@ $(document).ready(function(){
 			  dataType: "json",
 			  data: JSON.stringify(eval(jsonData)),
 
-			  success: function(resp){ //mora se vratiti generisani kljuc
+			  success: function(resp){ 
 
 			  	var form=document.getElementById('login_form');
 			  	form.reset();
-
-
+			  	
+			  	sessionStorage.setItem('email', resp.data.email);
 			  	sessionStorage.setItem('token', resp.data.token);
-			  	console.log(resp.data.token);
+
+			  	console.log(sessionStorage.getItem('token'));
 
 	  			window.location.href = "home.html";
 			  		
 			  },
-			  error: function(){
-			  	alert('Greška prilikom logovanja na sistem!');
-			  }
+			  error: function(XMLHttpRequest, textStatus, errorThrown){
 
+			  	var status=XMLHttpRequest.status;
+
+			  	if(status==401) {
+			  		alert('Neodgovarajući kredencijali!');
+
+			  	}
+			  	else {
+			  		alert("Greška, molimo pokusajte ponovo");
+
+			  	}
+			  	
+
+			 
+			}
 
 
 		});
