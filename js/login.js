@@ -35,16 +35,23 @@ $(document).ready(function(){
 
 			  success: function(resp){ 
 
-			  	var form=document.getElementById('login_form');
-			  	form.reset();
-			  	
-			  	sessionStorage.setItem('email', resp.data.email);
-			  	sessionStorage.setItem('token', resp.data.token);
+			  	if(resp.message=="Not a student"){
+			  		alert("Registrujte se kao student!");
+			  		var form=document.getElementById('login_form');
+				  	form.reset();
+			  	}
 
-			  	console.log(sessionStorage.getItem('token'));
+			  	else {
+				  	var form=document.getElementById('login_form');
+				  	form.reset();
+				  	
+				  	sessionStorage.setItem('email', resp.data.email);
+				  	sessionStorage.setItem('token', resp.data.token);
 
-	  			window.location.href = "home.html";
-			  		
+
+		  			window.location.href = "home.html";
+			  	}
+	
 			  },
 			  error: function(XMLHttpRequest, textStatus, errorThrown){
 
