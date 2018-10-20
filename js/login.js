@@ -2,7 +2,7 @@
 
 $(document).ready(function(){
 
-
+	//
 	const URLlogin="http://127.0.0.1:8000/api/login";
 
 	$("#login_form").submit(function(e){
@@ -27,6 +27,7 @@ $(document).ready(function(){
 		        'Accept': 'application/json',
 		        'Content-Type': 'application/json' 
     		  },
+    		  
 			  type: "POST",
 			  url: URLlogin,
 			  dataType: "json",

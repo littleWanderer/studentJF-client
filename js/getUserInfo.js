@@ -20,6 +20,7 @@ function cvDownloadButton(resp){
 		$('#download_cv_button').css('display','inline-block');
 
 		$('#download_cv').attr('href', resp.cv_link);
+		$('#download_cv').attr('download', true);
 	}
 }
 
@@ -63,7 +64,9 @@ function getUser (){
 			 	
 			  },
 			  error: function(){
-			  	alert('Greška prilikom učitavanja informacija!');
+			  	alert('Greška prilikom učitavanja informacija, morate biti ulogovani!');
+			  	window.location.href='login.html';
+
 			  }
 
 
