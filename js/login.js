@@ -59,10 +59,18 @@ $(document).ready(function(){
 
 			  	if(status==401) {
 			  		alert('Neodgovarajući kredencijali!');
+				  	var form=document.getElementById('login_form');
+
+				  	form.reset();
+
 
 			  	}
 			  	else {
 			  		alert("Greška, molimo pokusajte ponovo");
+				  	var form=document.getElementById('login_form');
+			  		
+				  	form.reset();
+
 
 			  	}
 			  	
