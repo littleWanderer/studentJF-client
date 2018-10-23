@@ -67,6 +67,12 @@ $(document).ready(function(){
 		  			//window.location.href = "home.html";
 				  		
 				  },
+				  complete: function(xhr){
+			  		sessionStorage.removeItem('token');
+
+		  			sessionStorage.setItem('token', xhr.getResponseHeader('Authorization').split(' ')[1]);
+		  			console.log(sessionStorage.getItem('token'));	
+				  },
 				  error: function(XMLHttpRequest, textStatus, errorThrown){
 
 				  	alert("Greška prilikom izmene lozinke!");

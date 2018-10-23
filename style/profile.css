@@ -49,7 +49,9 @@
 }
 
 
-
+#linkedin-info {
+	text-decoration: none;
+}
 
 .orange {
 	color: #F08E39;
@@ -61,4 +63,8 @@
 
 .horizontal-line {
 	border-left: 1px solid black
+}
+
+#hidden-content {
+	display: none;
 }

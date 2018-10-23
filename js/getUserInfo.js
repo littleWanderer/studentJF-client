@@ -1,8 +1,8 @@
 /* GET PROFILE INFO */
 
-function yearField(resp) {
-	if(resp.finished=="U toku"){
-					$('#year-info').text("Godina: "+resp.year);
+function yearField(finished, year) {
+	if(finished=="U toku"){
+					$('#year-info').text("Godina: "+year);
 					$('#status-info').text("Status studija: U toku");
 	}
 	else {
@@ -12,6 +12,14 @@ function yearField(resp) {
 
 
 	}
+}
+
+function linkedin (linkedin) {
+	if(linkedin!=null){
+		$('#linkedin-info').attr('href', linkedin);
+
+	}
+
 }
 
 
@@ -52,15 +60,17 @@ function getUser (){
 				$('#module-info').text("Smer: "+resp.module);
 				$('#degree-of-studies-info').text(resp.degree);
 				
-				yearField(resp);
+				yearField(resp.finished, resp.year);
 				cvDownloadButton(resp);
 
 				$('#grade-info').text("Prosečna ocena: "+resp.grade);
-				$('#linkedin-info').attr('href', resp.linkedin);
+				linkedin(resp.linkedin);
 				$('#licence-info').text("Posedujem vozačku dozvolu B kategorije: "+resp.licence); 
 			  	$('#languages-info').text("Jezici koje govorim: "+resp.languages);
 
 			  	
+
+			  	$('#hidden-content').css('display', 'block');
 			 	
 			  },
 			  error: function(){

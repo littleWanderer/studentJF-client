@@ -130,7 +130,6 @@ $(document).ready(function(){
 		jsonData["grade"]=$('#grade').val().trim();
 		jsonData["linkedin"]=$('#linkedin').val().trim();
 		jsonData["licence"]=$('#licence').val().trim(); 
-
 		jsonData["languages"]=languagesFieldData();
 
 
@@ -141,7 +140,8 @@ $(document).ready(function(){
 
 
 
-		console.log(jsonData);
+	  	console.log("token before"+sessionStorage.getItem('token'));
+		
 
 
 
@@ -164,9 +164,28 @@ $(document).ready(function(){
 			  	
 	  			alert("Informacije uspesno izmenjene!");
 
-	  			//reload page to get data from db
-	  			window.location.href=window.location.href;
-			  		
+	  			$('#nameSurname').text(jsonData["name"]+" "+jsonData['surname']);
+				
+				$('#sex-info').text(jsonData["sex"]);
+				$('#date-info').text(jsonData["birthDate"]);
+				$('#university-info').text(jsonData["university"]);
+				$('#faculty-info').text(jsonData["faculty"]);
+				$('#module-info').text("Smer: "+jsonData["module"]);
+				$('#degree-of-studies-info').text(jsonData["degree_of_studies"]);
+				$('#grade-info').text("Prosečna ocena: "+jsonData["grade"]);
+				$('#licence-info').text("Posedujem vozačku dozvolu B kategorije: "+jsonData["licence"]); 
+			  	$('#languages-info').text("Jezici koje govorim: "+jsonData["languages"]);
+				
+				yearField(jsonData["finished"],jsonData["year"]);
+				linkedin(jsonData["linkedin"]);
+
+	  			
+			  },
+			  complete: function(xhr){
+			  	sessionStorage.removeItem('token');
+
+	  			sessionStorage.setItem('token', xhr.getResponseHeader('Authorization').split(' ')[1]);
+	  			console.log(sessionStorage.getItem('token'));
 			  },
 			  error: function(){
 			  	alert('Greška prilikom izmene informacija!');

@@ -19,6 +19,7 @@
     width: 200px;
     height: 100%;
     float: left;
+    left: 130px;
 }
 #headerLogo img {
     width: 214px;
@@ -73,6 +74,7 @@
 #headerMenu li ul {
 	display: none;/*    width: 200px;
     height: 200px;*/
+    padding-left: 0;
 }
 
 #headerMenu li ul li {
@@ -126,7 +128,7 @@
 
 
 #template_header {
-	height: 35%;
+	height: 300px;
 	width: 100%;
 	background-image: url('../assets/images/pageTopPicture.jpg');
 	background-size: cover;
@@ -142,7 +144,7 @@
 	
 	position: absolute;
 	bottom: 0px;
-	left: 20px;
+	left: 150px;
 }
 
 #template_headline h1
@@ -169,7 +171,9 @@
 #footerWrapper {
 	height: 110px;
 	background-color: #343434;
-	left: 0;
+	left: -15px;
+	bottom: 0;
+	position: relative;
 }
 #footer {
 	height: 100%;
@@ -179,6 +183,8 @@
 #footerMenu {
 	float: left;
 	height: 50px;
+	position: absolute;
+	left: 100px;
 }
 #footerMenu ul {
 	margin-top: 20px;
@@ -201,7 +207,7 @@
 #footerContact {
 	position: absolute;
 	top: -10%;
-	right: 5%;
+	right: 15%;
 	height: 110%;
 	background-color: #F08E39;
 	border-radius: 15px 15px 0 0;

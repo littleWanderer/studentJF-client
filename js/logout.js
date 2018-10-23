@@ -28,9 +28,10 @@ $(document).ready(function(){
 			  	sessionStorage.removeItem('email');
 
 
-	  			window.location.href = "index.html";
+	  			window.location.href = "login.html";
 			  		
 			  },
+			  
 			  error: function(XMLHttpRequest, textStatus, errorThrown){
 			  
 			  		var status=XMLHttpRequest.status;

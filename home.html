@@ -24,7 +24,7 @@
 <body style="overflow-x: hidden;">
 
 
-<div class="container-fluid">
+<div class="container-fluid" id="hidden-content">
 
 
 	<div id="headerWrapper" class="row">
@@ -81,7 +81,7 @@
 		          </ul>
 		        </li>
 		        
-		        <li ><a href="../cv">Ostavi CV</a></li>
+		        <li ><a href="">Ostavi CV</a></li>
 
 				<li ><a href="oglasi.php">Oglasi</a></li>
 		        <li ><a href="galerija.php">Galerija</a></li>
@@ -106,13 +106,13 @@
 				<div class="col-12">
 					<!--<h5 id="logout" style="display: inline">Logout</h5> -->
 					<div>
-						<button type="button" class="btn dark-button button-large" data-toggle="modal" data-target="#cvModal">Otpremanje CV-a</button>
+						<button type="button" class="btn dark-button button-large" data-toggle="modal" data-target="#cvModal" id="upload_cv">Otpremanje CV-a</button>
 						<button type="button" style="display:none" id="download_cv_button" class="btn dark-button button-large">
 						<a id="download_cv" style="text-decoration: none; color:white">Preuzimanje CV-a</a>
 						</button>
 
-						<button type="button" class="btn dark-button button-large" id="update_info_button">Izmena profila</button>
-						<button type="button" class="btn dark-button button-large" data-toggle="modal" data-target="#passwordModal">Promena lozinke</button>
+						<button type="button" class="btn dark-button button-large" id="update_info_button" id="change_info">Izmena profila</button>
+						<button type="button" class="btn dark-button button-large" data-toggle="modal" data-target="#passwordModal" id="change_pass">Promena lozinke</button>
 					</div>
 				</div>
 				<!-- basic info -->
@@ -185,8 +185,9 @@
 				</div>
 				
 			</div>
-		</div>
-		<div id="footerWrapper" class="container-fluid" style="left:-15px">
+		</div> 
+
+		<div id="footerWrapper" class="container-fluid" >
 	  		<footer id="footer" class="row">
 		   <nav id="footerMenu">
 		      <ul>
