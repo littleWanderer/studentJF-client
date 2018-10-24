@@ -28,7 +28,7 @@ $(document).ready(function(){
 			  	sessionStorage.removeItem('email');
 
 
-	  			window.location.href = "login.html";
+	  			window.location.href = "login.php";
 			  		
 			  },
 			  

@@ -69,13 +69,14 @@ function getUser (){
 			  	$('#languages-info').text("Jezici koje govorim: "+resp.languages);
 
 			  	
+			  	$('.skeleton').css('display', 'none');
 
 			  	$('#hidden-content').css('display', 'block');
 			 	
 			  },
 			  error: function(){
 			  	alert('Greška prilikom učitavanja informacija, morate biti ulogovani!');
-			  	window.location.href='login.html';
+			  	window.location.href='login.php';
 
 			  }
 

@@ -1,0 +1,118 @@
+	.skeleton  {
+    	background-attachment: scroll;
+		width: 100%;
+		height: 170vh; /* change height to see repeat-y behavior */
+		position: relative;
+    
+		background:
+			linear-gradient(lightgray 300px, transparent 0), /*header*/
+
+			linear-gradient( 100deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80% ), /*highlight*/
+			
+			radial-gradient( circle 50px at 50% 70%, lightgray 99%, transparent 0 ), /*profile pic*/
+			
+			linear-gradient(lightgray 40px, transparent 0), /*button 1*/
+			linear-gradient(lightgray 40px, transparent 0), /*button 2*/
+			linear-gradient(lightgray 40px, transparent 0), /*button 3*/
+			
+			linear-gradient(lightgray 20px, transparent 0), /*name surname*/
+			linear-gradient(lightgray 20px, transparent 0), /*email*/
+			linear-gradient(lightgray 20px, transparent 0), /*sex*/
+			linear-gradient(lightgray 20px, transparent 0), /*date*/
+			linear-gradient(lightgray 30px, transparent 0), /*linkedin*/
+
+			linear-gradient(lightgray 30px, transparent 0), /*education*/
+			linear-gradient(lightgray 30px, transparent 0), /*other info*/
+
+			linear-gradient(lightgray 20px, transparent 0), /*education 1*/
+			linear-gradient(lightgray 20px, transparent 0), /*education 2*/
+			linear-gradient(lightgray 20px, transparent 0), /*education 3*/
+			linear-gradient(lightgray 20px, transparent 0), /*education 4*/
+			linear-gradient(lightgray 20px, transparent 0), /*education 5*/
+
+			linear-gradient(lightgray 20px, transparent 0), /*other info 1*/
+			linear-gradient(lightgray 20px, transparent 0), /*other info 2*/
+
+			linear-gradient(lightgray 40px, transparent 0); /*footer*/
+
+
+		background-repeat: no-repeat;
+
+		background-position: 
+		0 0, /*header*/
+		0 0, /*highlight*/
+		50% 40%, /*pic*/
+		25% 35%, /*button 1*/
+		50% 35%, /*button 2*/
+		75% 35%, /*button 3*/
+		50% 54%, /*name surname*/
+		50% 58%, /*email*/
+		50% 62%, /*sex*/
+		50% 66%, /*date*/
+		50% 70%, /*linkedin*/
+		24% 75%, /* education */
+		72% 75%, /* other info */
+		25% 80%, /* education 1*/
+		25% 84%, /* education 2*/
+		25% 88%, /* education 3*/
+		25% 92%, /* education 4*/
+		25% 96%, /* education 5*/
+		75% 80%, /* other info 1*/
+		75% 84%;/* other info 2*/
+		
+
+
+
+
+		background-size: 
+		100% 300px, /*header*/
+		100% 100%, /*highlight*/
+		100px 200px, /*pic*/
+		200px 40px, /*button*/
+		200px 40px, /*button*/
+		200px 40px, /*button*/
+		150px 20px,
+		200px 20px,
+		100px 20px,
+		150px 20px,
+		30px 30px,
+		150px 30px, /* education */
+		150px 30px, /* other info */
+		200px 20px, /* education 1*/
+		200px 20px, /* education 2*/
+		200px 20px, /* education 3*/
+		200px 20px, /* education 4*/
+		200px 20px, /* education 5*/
+		200px 20px, /* other info 1*/
+		200px 20px;/* other info 2*/
+
+		animation: shine 1.5s infinite; 
+	}
+
+	@keyframes shine {
+		to {
+			background-size:
+				100% 300px, /*header*/
+				0 100%, /*highlight*/
+				100px 200px, /*pic*/
+				200px 40px, /*button*/
+				200px 40px, /*button*/
+				200px 40px, /*button*/
+				150px 20px,
+				200px 20px,
+				100px 20px,
+				150px 20px,
+				30px 30px,
+				150px 30px, /* education */
+				150px 30px, /* other info */
+				200px 20px, /* education 1*/
+				200px 20px, /* education 2*/
+				200px 20px, /* education 3*/
+				200px 20px, /* education 4*/
+				200px 20px, /* education 5*/
+				200px 20px, /* other info 1*/
+				200px 20px;/* other info 2*/
+
+				
+			}
+	}

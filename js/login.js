@@ -49,7 +49,7 @@ $(document).ready(function(){
 				  	sessionStorage.setItem('token', resp.data.token);
 
 
-		  			window.location.href = "home.html";
+		  			window.location.href = "home.php";
 			  	}
 	
 			  },
