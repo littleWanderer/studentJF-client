@@ -36,7 +36,7 @@ function getUser (){
 
 		var token = sessionStorage.getItem('token');
 		var email = sessionStorage.getItem('email');
-		const URLlogin="http://127.0.0.1:8000/api/student/getInfo/"+email;
+		const URLlogin="http://cv.brain.rs/api/student/getInfo/"+email;
 
 		$.ajax({
 			  

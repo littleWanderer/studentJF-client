@@ -9,7 +9,7 @@ $(document).ready(function(){
         e.stopPropagation();
 
         
-		const URLlogin="http://127.0.0.1:8000/api/student/imageUpload";
+		const URLlogin="http://cv.brain.rs/api/student/imageUpload";
 
 		var token=sessionStorage.getItem('token');
 		

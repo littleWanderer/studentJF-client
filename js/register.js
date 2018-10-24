@@ -52,7 +52,7 @@ $(document).ready(function(){
 		e.preventDefault();
         e.stopPropagation();
 
-		const URLlogin="http://127.0.0.1:8000/api/student/register";
+		const URLlogin="http://cv.brain.rs/api/student/register";
 		
 		
 		var jsonData = {};

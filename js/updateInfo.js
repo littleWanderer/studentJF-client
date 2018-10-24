@@ -113,7 +113,7 @@ $(document).ready(function(){
         e.stopPropagation();
 
 
-		const URLlogin="http://127.0.0.1:8000/api/student/updateInfo";
+		const URLlogin="http://cv.brain.rs/api/student/updateInfo";
 		
 		
 		var jsonData = {};

@@ -9,7 +9,7 @@ $(document).ready(function(){
 		e.preventDefault();
         e.stopPropagation();
 
-		const URLlogin="http://127.0.0.1:8000/api/logout";
+		const URLlogin="http://cv.brain.rs/api/logout";
 
 			  	
         var token = sessionStorage.getItem('token');

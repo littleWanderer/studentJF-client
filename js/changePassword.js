@@ -35,7 +35,7 @@ $(document).ready(function(){
 			jsonData['old_password']=old_password;
 
 
-			const URLlogin="http://127.0.0.1:8000/api/student/changePassword/"+email;
+			const URLlogin="http://cv.brain.rs/api/student/changePassword/"+email;
 
 			$.ajax({
 				  headers: { 
