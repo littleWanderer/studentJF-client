@@ -74,7 +74,10 @@ $(document).ready(function(){
 		  			console.log(sessionStorage.getItem('token'));	
 				  },
 				  error: function(XMLHttpRequest, textStatus, errorThrown){
+				  	sessionStorage.removeItem('token');
 
+	  				sessionStorage.setItem('token', XMLHttpRequest.getResponseHeader('Authorization').split(' ')[1]);
+	  			
 				  	alert("Greška prilikom izmene lozinke!");
 			
 				}

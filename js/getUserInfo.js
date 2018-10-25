@@ -26,9 +26,7 @@ function linkedin (linkedin) {
 function cvDownloadButton(resp){
 	if(resp.hasCV){
 		$('#download_cv_button').css('display','inline-block');
-
 		$('#download_cv').attr('href', resp.cv_link);
-		$('#download_cv').attr('download', true);
 	}
 }
 
@@ -49,7 +47,7 @@ function getUser (){
 			  success: function(resp){ 
 
 			  	$('#img').attr('src', resp.img);
-			  	console.log(resp.img);
+			  	
 			  	$('#email-info').text(resp.email);
 				$('#nameSurname').text(resp.name+" "+resp.surname);
 				

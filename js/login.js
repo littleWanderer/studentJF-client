@@ -4,6 +4,7 @@ $(document).ready(function(){
 
 	//
 	const URLlogin="http://cv.brain.rs/api/login";
+	//const URLlogin="http://127.0.0.1:8000/api/login";
 
 	$("#login_form").submit(function(e){
 

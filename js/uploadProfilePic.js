@@ -41,6 +41,7 @@ $(document).ready(function(){
 				  	form.reset();
 		  			alert("Slika uspešno sačuvana!");
 		  			$('#img').attr('src', resp.link);
+		  			console.log('deleted img path:'+resp.deleted);
 
 			  	}
 
@@ -50,9 +51,12 @@ $(document).ready(function(){
 			  	sessionStorage.removeItem('token');
 
 	  			sessionStorage.setItem('token', xhr.getResponseHeader('Authorization').split(' ')[1]);
-	  			console.log(sessionStorage.getItem('token'));
 			  },
-			  error: function(){
+			  error: function(XMLHttpRequest, textStatus, errorThrown){
+			  	sessionStorage.removeItem('token');
+
+	  			sessionStorage.setItem('token', XMLHttpRequest.getResponseHeader('Authorization').split(' ')[1]);
+			 
 			  	alert('Greška prilikom čuvanja slike!');
 			  }
 

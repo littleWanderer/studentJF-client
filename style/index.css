@@ -19,7 +19,7 @@ body, html{
 	position: absolute;
 	top: 50%;
 	width: 100%;
-	padding-top: 50px;
+	padding-top: 20px;
 
 }
 
@@ -27,14 +27,25 @@ body, html{
 	position: relative;
 	left: 50%;
 	transform: translate(-50%);
+	height: 300px;
 }
 
 
-#login_form {
+#login_form, #send_reset_link_form, #reset_password_form {
 	text-align: center;
 	width: 60%;
 	margin: auto;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
 }
+
+#send_reset_link_form {
+	display: none;
+}
+
+
 
 #register_button, #forgot_pswd {
 	background-color: transparent;
@@ -48,11 +59,14 @@ body, html{
 	color: white;
 }
 
-#login_button, .dark-button  {
+#login_button, .dark-button, #send_link_button, #reset_button {
 	background-color: #343434;
 	border: none;
 	color: white;
 }
+
+
+
 
 .button-large {
 	width: 150px;
